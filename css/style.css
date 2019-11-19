@@ -1,0 +1,250 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+/* HEADER */
+
+header {
+    text-align: center;
+    padding: 20px;
+    color: #fff;
+    text-shadow: #222222 1px 1px 2px;
+    box-shadow: #222222 0 0 3px;
+    background: linear-gradient(to right, #A5FECB, #20BDFF, #5433FF);
+}
+
+/* BROWSERS */
+
+.browsers {
+    padding: 5px; 
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background:  linear-gradient(to right, #ffffff, #daf6fa, #aff7fc);
+}
+
+/* BROWSER */
+
+.browser {
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    box-shadow: #222222 1px 1px 2px;
+    background: linear-gradient(to right, #4286f4, #373B44);
+    border-radius: 5%;
+    margin: 10px;
+}
+
+.content h2 {
+    text-align: center;
+    padding: 10px;
+    animation:
+  		cont-color 7000ms linear infinite,
+  		cont-moves 2000ms ease;
+}
+
+@keyframes cont-color {
+	0% {
+		color: #FF0000;
+    }
+
+
+	33% {
+		color: #09ff00;
+    }
+
+
+	66% {
+		color: #0000FF;
+    }
+
+
+	100% {
+		color: #FF0000;
+	}
+}
+
+@keyframes cont-moves {
+	from {
+		transform: translateX(100vw);
+    }
+
+
+	to {
+		transform: translateX(0);
+	}
+}
+
+.content .img img {
+    float: left;
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    background-color: #fff;
+    box-shadow:
+        #5e4ad3 -2px -2px 3px,
+        #5e4ad3 2px 2px 3px;
+    animation: brows-moves 2000ms ease;
+}
+
+
+@keyframes brows-moves {
+	from {
+		transform: translateX(-100vw) rotateX(-360deg);
+    }
+
+
+	to {
+		transform: translateX(0) rotate(0);
+	}
+}
+
+.content p {
+    color: #fff;
+    padding: 10px;
+    text-shadow: #222222 1px 0 1px;
+}
+
+.control {
+    display: flex;
+    justify-content: center;
+}
+
+.control .btn {
+    font-size: 1rem;
+    border: solid 1px transparent;
+    border-radius: 2px;
+    padding: 0.5em 1em;
+    margin-bottom: 5px;
+    color: #fff;
+    background-color: #5e4ad3;
+    box-shadow: #222222 1px 3px 5px;
+    cursor: pointer;
+    transition: 
+        background-color 300ms ease,
+        text-shadow 300ms ease;
+}
+
+.btn:active {
+    transform: translateY(1px);
+}
+
+.btn:hover,
+.btn:focus {
+    background-color: #8800d6;
+    text-shadow: #fff 0 0 6px;
+}
+
+/* FOOTER */
+
+footer {
+    padding: 15px;
+    box-shadow: #222222 0 0 3px;
+    background: linear-gradient(to right, #A5FECB, #20BDFF, #5433FF);    
+}
+
+footer ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+footer ul li {
+    padding: 5px;
+    text-shadow: #222222 0 0 3px;
+}
+
+footer a:link {
+    color: #fff;
+}
+
+/* MEDIA */
+
+@media (max-width: 900px) {
+    .browser {
+        flex-basis: 100%;
+    }
+}
+
+
+@media (min-width: 900px) {
+
+    .browser {
+        flex-basis: 45%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .browser {
+        flex-basis: 25%;
+    }
+}
+
+/* or Grid... */
+
+/* .browsers:first-child {
+    grid-area: browser-1;
+}
+
+.browsers:nth-child(2) {
+    grid-area: browser-2;
+}
+
+.browsers:nth-child(3) {
+    grid-area: browser-3;
+}
+
+.browsers:nth-child(4) {
+    grid-area: browser-4;
+}
+
+.browsers:nth-child(5) {
+    grid-area: browser-5;
+}
+
+.browsers:last-child {
+    grid-area: browser-6;
+} */
+
+/* @media (min-width: 320px) {
+    .browsers {
+        grid-template: repeat (6, 1fr) / 1fr;
+        grid-template-areas: 
+            "browser-1"
+            "browser-2"
+            "browser-3"
+            "browser-4"
+            "browser-5"
+            "browser-6";
+    }
+}
+
+@media (min-width: 900px) {
+    .browsers {
+       grid-template: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "browser-1 browser-2"
+        "browser-1 browser-2"
+        "browser-3 browser-4"
+        "browser-3 browser-4"
+        "borwser-5 browser-6"
+        "borwser-5 browser-6";
+    }
+}
+
+@media (min-width: 1200px) {
+    .browsers {
+       grid-template: 1fr 1fr 1fr ;
+        padding-right: 10%;
+        padding-left: 10%;
+        grid-template-areas: 
+        "browser-1 browser-2 browser-3"
+        "browser-1 browser-2 browser-3"
+        "browser-4 browser-5 browser-6"
+        "browser-4 browser-5 browser-6";
+    }
+} */
+
